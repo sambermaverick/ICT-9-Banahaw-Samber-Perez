@@ -7,11 +7,13 @@ body, html {
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url("Perez BG.jpg"); /* Corrected: Added url() */
-  background-size: cover; /* Changed to cover */
+  background-image: url("Perez BG.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   min-height: 100vh;
+  background-attachment: fixed; /* This line keeps the background fixed */
+}
 }
 
 .layout {
