@@ -1,20 +1,18 @@
 html, body {
-  height: 100%; /* Make sure both html and body take up the full height */
-  margin: 0; /* Remove default body margins */
-  padding: 0; /* Remove default body padding */
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  /* Your existing background styles */
-  background-image: url("your-background-image.jpg"); /* Replace with your image */
+  background-image: url("your-background-image.jpg"); /* Replace with your image URL */
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #f0f0f0; /* Fallback color - adjust as needed */
-  min-height: 100%; /* Ensure it covers the full viewport height */
+  background-attachment: fixed; /* Locks the background in place */
+  background-color: #f0f0f0; /* Fallback color */
+  min-height: 100%; /* Ensure full viewport coverage */
 }
 
-/* Rest of your CSS styles */
 .layout {
   display: flex;
   justify-content: space-between;
@@ -37,7 +35,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: inline-block; /* To center the info-box */
+  display: inline-block;
 }
 
 .profile-img {
