@@ -1,54 +1,166 @@
-html, body {
-  height: 100%;
+/* Reset some default styles */
+body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 body {
-  background-image: url("your-background-image.jpg"); /* Replace with your image URL */
-  background-size: cover;
+  font-family: Arial, sans-serif;
+  background-image: url("images/Perez BG.jpg"); /* Make sure the path is correct */
+  background-size: cover; /* Changed to cover */
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Locks the background in place */
-  background-color: #f0f0f0; /* Fallback color */
-  min-height: 100%; /* Ensure full viewport coverage */
+  background-position: top center;
+  min-height: 100vh;
 }
 
 .layout {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  align-items: flex-start;
+  margin: 50px;
 }
 
 .side-img {
-  width: 200px; /* Adjust as needed */
-  height: auto;
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+  border: 3px solid #555;
+  border-radius: 5px;
+  transform: scale(0.95);
+  transition: transform 0.5s ease;
+}
+
+.side-img:hover {
+  transform: scale(1.05);
 }
 
 .container {
-  flex-grow: 1;
-  text-align: center;
-}
-
-.info-box {
-  background-color: #fff;
+  max-width: 600px;
+  background: rgba(246, 227, 55, 0.9);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: slideUp 1.5s ease-out;
 }
 
 .profile-img {
-  width: 150px; /* Adjust as needed */
+  width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  object-fit: cover;
+  border: 3px solid #555;
+  margin-bottom: 20px;
+  animation: pulse 3s infinite;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #0c356b;
+  animation: fadeIn 2s ease-in;
 }
 
 .info {
-  margin-bottom: 5px;
+  margin: 10px 0;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
 }
 
-.info.motto {
+.info:hover {
+  color: #000;
+}
+
+.motto {
   font-style: italic;
+  color: #555;
+}
+
+.info-box {
+  background-color: #b99eeb;
+  border: 2px solid #2c3e50;
+  border-radius: 8px;
+  padding: 30px;
+  margin-top: 20px;
+  display: inline-block;
+  text-align: left;
+  animation: bounceIn 1.5s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .layout {
+    margin: 30px;
+  }
+
+  .side-img {
+    width: 300px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 992px) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .side-img {
+    width: 70%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    margin: 10px;
+  }
+
+  .side-img {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .info-box {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .info {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 576px) {
+  .side-img {
+    max-width: 95%;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  .info {
+    font-size: 0.9em;
+  }
 }
