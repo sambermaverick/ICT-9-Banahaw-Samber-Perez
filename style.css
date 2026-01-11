@@ -14,7 +14,6 @@ body {
   min-height: 100vh;
   background-attachment: fixed; /* This line keeps the background fixed */
 }
-}
 
 .layout {
   display: flex;
