@@ -1,13 +1,20 @@
-body {
-  /* Example background - replace with your actual background image if you have one */
-  /* If you don't have a background image, remove the background-image line */
-  background-image: url("your-background-image.jpg"); /* Replace with your image */
-  background-size: cover; /* Or contain, or other size as needed */
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* This keeps the background fixed */
-  background-color: #f0f0f0; /* Add a background color as a fallback */
+html, body {
+  height: 100%; /* Make sure both html and body take up the full height */
+  margin: 0; /* Remove default body margins */
+  padding: 0; /* Remove default body padding */
 }
 
+body {
+  /* Your existing background styles */
+  background-image: url("your-background-image.jpg"); /* Replace with your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #f0f0f0; /* Fallback color - adjust as needed */
+  min-height: 100%; /* Ensure it covers the full viewport height */
+}
+
+/* Rest of your CSS styles */
 .layout {
   display: flex;
   justify-content: space-between;
